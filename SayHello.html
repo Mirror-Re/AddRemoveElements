@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Say Hello</title>
+    <link href="style2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>Say Hello!</h3>
+        <div class="row">
+            <div>
+                <label for="frst">First</label>
+                <input type="text" id="frst" name="frst" style="width: 100px;">
+            </div>
+            <div>
+                <label for="lst">Last</label>
+                <input type="text" id="lst" name="lst" style="width: 100px;">
+            </div>
+        </div>
+        <button id="hello">Say Hello!</button>
+        <button id="clear">Clear</button>
+        <p></p>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    const frst = document.getElementById('frst');
+    const lst = document.getElementById('lst');
+    const full = document.querySelector('p');
+    const helloButton = document.getElementById('hello');
+    const clearButton = document.getElementById('clear');
+
+    clearButton.addEventListener('click', function(e){
+        frst.value = " ";
+        lst.value = " ";
+        full.textContent = " ";
+    });
+
+    helloButton.addEventListener('click', function(e){
+        let FirstName = frst.value;
+        let LastName = lst.value;
+        full.textContent = `Hello ${FirstName} ${LastName}`;
+        content.appendChild(full);
+    });
+</script>
+</body>
+</html>

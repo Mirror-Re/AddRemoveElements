@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert Practice</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+<div class="container">
+    <div class="content">
+        <h3>What is this?</h3>
+        <h4>I don't want this</h4>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    //replace contents of an html tag using innerHTML
+    content.innerHTML = '<h1 class="gone" id="lose">I love Minecraft</h1><h4>Dont judge me please ;-;</h4>'
 
+    //put this at the top in addition to the existing elements
+    const food = document.createElement('h1');
+    food.innerHTML = 'I love pizza';
+    content.insertAdjacentElement('afterend', food);
+
+    //add a new element in addition to exsisting elements
+    const minecraft = document.createElement('h1');
+    minecraft.innerHTML = 'I love Minecraft, part 2';
+    content.appendChild(minecraft);
+
+    //to remove an element
+    const unwantedElement = document.querySelector('h4');
+    unwantedElement.remove();
+
+    const unwantedElement2 = document.querySelector('.gone');
+    unwantedElement2.remove();
+
+    const wilbur = document.createElement('h3');
+    wilbur.innerHTML = 'I hate Wilbur Soot';
+    content.appendChild(wilbur);
+
+    const everyone = document.createElement('h2');
+    everyone.innerHTML = 'tbh, everyone should';
+    content.appendChild(everyone);
+
+    const ranboo = document.createElement('h1');
+    ranboo.innerHTML = 'I adore Ranboo though :3';
+    content.appendChild(ranboo);
+</script>
 </body>
 </html>
