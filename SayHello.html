@@ -25,7 +25,6 @@
     </div>
 </div>
 <script>
-    const content = document.querySelector('.content');
     const frst = document.getElementById('frst');
     const lst = document.getElementById('lst');
     const full = document.querySelector('p');
@@ -42,7 +41,6 @@
         let FirstName = frst.value;
         let LastName = lst.value;
         full.textContent = `Hello ${FirstName} ${LastName}`;
-        content.appendChild(full);
     });
 </script>
 </body>
